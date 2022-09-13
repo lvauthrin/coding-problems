@@ -1,3 +1,6 @@
+[tool.pylint.main]
+disable=too-few-public-methods
+
 [tool.pylint.format]
 indent-string = '  '
 max-line-length = 140
