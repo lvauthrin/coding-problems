@@ -4,18 +4,18 @@ Leetcode: https://leetcode.com/explore/learn/card/fun-with-arrays/521/introducti
 from typing import List
 
 class MaxConsecutiveOnes:
-  """ solution class """
+    """ solution class """
 
-  def main(self, nums: List[int]) -> int:
-    """ main_method """
-    max_ones = 0
-    counter = 0
-
-    for vals in nums:
-      if vals == 1:
-        counter += 1
-        max_ones = max(counter, max_ones)
-      else:
+    def main(self, nums: List[int]) -> int:
+        """ main_method """
+        max_ones = 0
         counter = 0
 
-    return max_ones
+        for vals in nums:
+            if vals == 1:
+                counter += 1
+                max_ones = max(counter, max_ones)
+            else:
+                counter = 0
+
+        return max_ones
