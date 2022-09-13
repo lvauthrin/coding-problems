@@ -6,11 +6,10 @@ from typing import Optional
 
 class Node:
   """ Node class """
-  def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
+  def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None):
     self.val = val
     self.left = left
     self.right = right
-    self.next = next
 
 class Solution: # pylint: disable=too-few-public-methods
   """ solution class """
@@ -22,35 +21,36 @@ class Solution: # pylint: disable=too-few-public-methods
     if root.left is None or root.right is None:
       return False
 
-    return self.checkNodes(root.left, root.right)
+    return self.check_nodes(root.left, root.right)
 
   def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
     """ main method iterative """
     pass
 
-  def checkNodes(self, left, right):
+  def check_nodes(self, left, right):
+    """ check nodes recursively """
     if left.val != right.val:
       return False
     result = True
 
-    if left.left is None and right.right != None:
+    if left.left is None and right.right is not None:
       return False
-    if left.left != None and right.right is None:
+    if left.left is not None and right.right is None:
       return False
-    if left.right is None and right.left != None:
+    if left.right is None and right.left is not None:
       return False
-    if left.right != None and right.left is None:
+    if left.right is not None and right.left is None:
       return False
 
-    if left.left != None and right.right != None:
-      result = result and self.checkNodes(left.left, right.right)
-    if left.right != None and right.left != None:
-      result = result and self.checkNodes(left.right, right.left)
+    if left.left is not None and right.right is not None:
+      result = result and self.check_nodes(left.left, right.right)
+    if left.right is not None and right.left is not None:
+      result = result and self.check_nodes(left.right, right.left)
 
     return result
 
-    def __main__():
-      tester = Solution()
+def __main__():
+  tester = Solution()
 
-      tree1 = Node(Node(1), Node(1))
-      tester.is_tree_symmetric_recursive(tree1)
+  tree1 = Node(Node(1), Node(1))
+  tester.is_tree_symmetric_recursive(tree1)
