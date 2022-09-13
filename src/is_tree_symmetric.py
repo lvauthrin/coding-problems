@@ -2,7 +2,7 @@
 Leetcode: https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-problems-recursively/536/
 """
 
-from typing import List
+from typing import Optional
 
 class Node:
   """ Node class """
@@ -17,8 +17,10 @@ class Solution: # pylint: disable=too-few-public-methods
 
   def is_tree_symmetric_recursive(self, root: Optional[TreeNode]) -> bool:
     """ main method recursive """
-    if root.left == None and root.right == None: return True
-    if root.left == None or root.right == None: return False
+    if root.left is None and root.right is None:
+      return True
+    if root.left is None or root.right is None:
+      return False
 
     return self.checkNodes(root.left, root.right)
 
@@ -26,23 +28,28 @@ class Solution: # pylint: disable=too-few-public-methods
     """ main method iterative """
     pass
 
-  def checkNodes(self, l, r):
-    if l.val != r.val: return False
+  def checkNodes(self, left, right):
+    if left.val != right.val:
+      return False
     result = True
 
-    if l.left == None and r.right != None: return False
-    if l.left != None and r.right == None: return False
-    if l.right == None and r.left != None: return False
-    if l.right != None and r.left == None: return False
+    if left.left is None and right.right != None:
+      return False
+    if left.left != None and right.right is None:
+      return False
+    if left.right is None and right.left != None:
+      return False
+    if left.right != None and right.left is None:
+      return False
 
-    if l.left != None and r.right != None:
-      result = result and self.checkNodes(l.left, r.right)
-    if l.right != None and r.left != None:
-      result = result and self.checkNodes(l.right, r.left)
+    if left.left != None and right.right != None:
+      result = result and self.checkNodes(left.left, right.right)
+    if left.right != None and right.left != None:
+      result = result and self.checkNodes(left.right, right.left)
 
     return result
 
-    def main():
+    def __main__():
       tester = Solution()
 
       tree1 = Node(Node(1), Node(1))
