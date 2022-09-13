@@ -25,7 +25,7 @@ class Solution: # pylint: disable=too-few-public-methods
 
   def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
     """ main method iterative """
-    pass
+    return False
 
   def check_nodes(self, left, right):
     """ check nodes recursively """
