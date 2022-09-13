@@ -3,10 +3,10 @@ Leetcode: https://leetcode.com/explore/learn/card/fun-with-arrays/521/introducti
 """
 from typing import List
 
-class MaxConsecutiveOnes:
+class Solution: # pylint: disable=too-few-public-methods
     """ solution class """
 
-    def main(self, nums: List[int]) -> int:
+    def max_consecutive_ones(self, nums: List[int]) -> int:
         """ main_method """
         max_ones = 0
         counter = 0
