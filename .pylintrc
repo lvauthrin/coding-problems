@@ -1,3 +1,5 @@
+[tool.pylint.main]
+disable = max-line-length
+
 [tool.pylint.format]
 indent-string = '  '
-max-line-length = 100
