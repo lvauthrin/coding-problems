@@ -6,11 +6,11 @@ from typing import List
 
 class Node:
   """ Node class """
-    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
-        self.val = val
-        self.left = left
-        self.right = right
-        self.next = next
+  def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
+    self.val = val
+    self.left = left
+    self.right = right
+    self.next = next
 
 class Solution: # pylint: disable=too-few-public-methods
   """ solution class """
@@ -41,3 +41,11 @@ class Solution: # pylint: disable=too-few-public-methods
       result = result and self.checkNodes(l.right, r.left)
       
     return result
+
+    def main():
+      tester = Solution()
+      
+      tree1 = Node(Node(1), Node(1))
+      tester.is_tree_symmetric_recursive(tree1)
+
+
