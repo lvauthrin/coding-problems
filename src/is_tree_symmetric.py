@@ -15,7 +15,7 @@ class Node:
 class Solution: # pylint: disable=too-few-public-methods
   """ solution class """
 
-  def is_tree_symmetric_recursive(self, root: Optional[TreeNode]) -> bool:
+  def is_tree_symmetric_recursive(self, root: Optional[Node]) -> bool:
     """ main method recursive """
     if root.left is None and root.right is None:
       return True
@@ -24,7 +24,7 @@ class Solution: # pylint: disable=too-few-public-methods
 
     return self.checkNodes(root.left, root.right)
 
-  def is_tree_symmetric_iterative(self, root: Optional[TreeNode]) -> bool:
+  def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
     """ main method iterative """
     pass
 
