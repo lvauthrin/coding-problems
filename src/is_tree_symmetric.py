@@ -25,7 +25,37 @@ class Solution: # pylint: disable=too-few-public-methods
 
   def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
     """ main method iterative """
-    return root is not None
+
+    if root is None:
+      return False
+
+    next_level = deque([root])
+    level = deque()
+
+    while len(next_level) > 0:
+      while len(next_level) > 0:
+        node = next_level.popleft()
+        if node is not None:
+            level.append(node.right)
+            level.append(node.left)
+
+      i, j = 0, len(level) - 1
+
+      while i <= j:
+        left_none = level[i] is None and level[j] is not None
+        right_none = level[i] is not None and level[j] is None
+        not_none = level[i] is not None and level[j] is not None
+        not_equal = not_none and level[i].val != level[j].val
+        if left_none or right_none or not_equal:
+          return False
+
+        i += 1
+        j -= 1
+
+      next_level = level
+      level = deque()
+
+    return True
 
   def check_nodes(self, left, right):
     """ check nodes recursively """
