@@ -3,6 +3,7 @@ Leetcode: https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-p
 """
 
 from typing import Optional
+from collections import deque
 
 class Node:
   """ Node class """
@@ -36,8 +37,8 @@ class Solution: # pylint: disable=too-few-public-methods
       while len(next_level) > 0:
         node = next_level.popleft()
         if node is not None:
-            level.append(node.right)
-            level.append(node.left)
+          level.append(node.right)
+          level.append(node.left)
 
       i, j = 0, len(level) - 1
 

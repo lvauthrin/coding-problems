@@ -1,20 +1,23 @@
 """
 Link:
 """
-from typing import List
 
 class Solution:
   """ solution class """
 
-  def find_number_of_ways(self, x, y):
+  def find_number_of_ways(self, row, col, memo = {}):
     """ main_method """
+    key = row + ',' + col
+    if key in memo:
+      return memo[key]
 
-    if x == 0 or y == 0:
-        return 0
-    if x == 1 and y == 1:
-        return 1
+    if row == 0 or col == 0:
+      return 0
+    if row == 1 and col == 1:
+      return 1
 
-    xways = find_number_of_ways(x - 1, y)
-    yways = find_number_of_ways(x, y - 1)
+    xways = find_number_of_ways(self, row - 1,  col, memo)
+    yways = find_number_of_ways(self, row, col - 1, memo)
 
-    return max(xways, yways)
+    memo[key] = xways + yways
+    return memo[key]
