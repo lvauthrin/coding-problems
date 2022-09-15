@@ -49,8 +49,12 @@ class Solution:
     memo[target] = total
     return total
 
-def __main__():
+def main():
   solution = Solution()
-  assert solution.can_sum_to(7, [4,5,7,3], {})
-  assert solution.can_sum_to(8, [2,3,5], {})
-  assert solution.can_sum_to(13, [2,12,4], {})
+  assert solution.can_sum_to(7, [4,5,7,3], {}), "retuned false when expected true"
+  assert solution.can_sum_to(8, [2,3,5], {}), "retuned false when expected true"
+  assert not solution.can_sum_to(13, [2,12,4], {}), "retuned true when expected false"
+
+if __name__ == "__main__":
+  main()
+  print("main completed")
