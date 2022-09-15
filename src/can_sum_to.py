@@ -19,7 +19,7 @@ class Solution:
       return True
 
     for num in nums:
-      if self.can_sum_to(self, target - num, nums, candidates, memo):
+      if self.can_sum_to(target - num, nums, memo):
         memo[target] = True
         return memo[target]
 
@@ -34,17 +34,17 @@ class Solution:
       return memo[target]
 
     if target < 0:
-        return 0
+      return 0
 
     if target == 0:
-        return 1
+      return 1
 
     total = 0
 
     for num in nums:
       candidates = answers
       candidates.append(num)
-      total = total + self.find_number_of_ways(self, target - num, nums, candidates, memo)
+      total = total + self.find_number_of_ways(target - num, nums, candidates, memo)
 
     memo[target] = total
     return total
