@@ -5,7 +5,7 @@ Link:
 class Solution:
   """ solution class """
 
-  def find_number_of_ways(self, row, col, memo = {}):
+  def find_number_of_ways(self, row, col, memo):
     """ main_method """
     key = row + ',' + col
     if key in memo:
@@ -16,8 +16,8 @@ class Solution:
     if row == 1 and col == 1:
       return 1
 
-    xways = find_number_of_ways(self, row - 1,  col, memo)
-    yways = find_number_of_ways(self, row, col - 1, memo)
+    xways = self.find_number_of_ways(row - 1,  col, memo)
+    yways = self.find_number_of_ways(row, col - 1, memo)
 
     memo[key] = xways + yways
     return memo[key]
