@@ -1,0 +1,129 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@rules_python_pytest//python_pytest:defs.bzl", "py_pytest_test")
+load("@my_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "add_two_linked_lists",
+    srcs = ["add_two_linked_lists.py"],
+    deps = ["//python-solutions/util:linked_list"],
+)
+
+py_binary(
+    name="binary_trees_are_identical",
+    srcs = ["binary_trees_are_identical.py"],
+    deps = [],
+)
+
+py_binary(
+    name="buildings_with_ocean_view",
+    srcs = ["buildings_with_ocean_view.py"],
+    deps = [],
+)
+
+py_binary(
+    name="candy_crush",
+    srcs = ["candy_crush.py"],
+    deps = [],
+)
+
+py_binary(
+    name="climb_stairs_by_n_steps",
+    srcs = ["climb_stairs_by_n_steps.py"],
+    deps = [],
+)
+
+py_binary(
+    name="construct_string",
+    srcs = ["construct_string.py"],
+    deps = [],
+)
+
+py_binary(
+    name="grid_traveler",
+    srcs = ["grid_traveler.py"],
+    deps = [],
+)
+
+py_binary(
+    name="is_tree_symmetric",
+    srcs = ["is_tree_symmetric.py"],
+    deps = [],
+)
+
+py_binary(
+    name="max_consecutive_ones",
+    srcs = ["max_consecutive_ones.py"],
+    deps = [],
+)
+
+py_binary(
+    name="maximize_array_sum",
+    srcs = ["maximize_array_sum.py"],
+    deps = [],
+)
+
+py_binary(
+    name="merge_intervals",
+    srcs = ["merge_intervals.py"],
+    deps = [],
+)
+
+py_binary(
+    name="merge_sort",
+    srcs = ["merge_sort.py"],
+    deps = [],
+)
+
+py_binary(
+    name="merged_two_sorted_linked_list",
+    srcs = ["merged_two_sorted_linked_list.py"],
+    deps = [],
+)
+
+py_binary(
+    name="mirror_binary_tree",
+    srcs = ["mirror_binary_tree.py"],
+    deps = [],
+)
+
+py_binary(
+    name="subsets",
+    srcs = ["subsets.py"],
+    deps = [],
+)
+
+py_binary(
+    name="sum_to",
+    srcs = ["sum_to.py"],
+    deps = [],
+)
+
+py_binary(
+    name="three_sum",
+    srcs = ["three_sum.py"],
+    deps = [],
+)
+
+py_binary(
+    name="two_city_scheduling",
+    srcs = ["two_city_scheduling.py"],
+    deps = [],
+)
+
+filegroup(
+    name = "all_tests",
+    srcs = glob(["test_*.py"])
+)
+
+py_pytest_test(
+    name = "test_w_pytest",
+    size = "small",
+    srcs = ["//python-solutions:all_tests"],
+    deps = [
+        "//python-solutions/util:test",
+        "@my_deps_exceptiongroup//:pkg",
+        "@my_deps_pytest//:pkg",
+    ]
+
+)
