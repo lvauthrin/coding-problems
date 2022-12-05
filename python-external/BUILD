@@ -1,4 +1,4 @@
 filegroup(
   name = "requirements.txt",
-  src = ["requirements.txt"]
+  srcs = ["requirements.txt"]
 )

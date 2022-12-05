@@ -9,6 +9,12 @@ py_binary(
     deps = ["//python-solutions/util:linked_list"],
 )
 
+py_test(
+    name = "test_add_two_linked_lists",
+    srcs = ["test_add_two_linked_lists.py"],
+    deps = ["add_two_linked_lists", "//python-solutions/util:linked_list"],
+)
+
 py_binary(
     name="binary_trees_are_identical",
     srcs = ["binary_trees_are_identical.py"],
@@ -111,19 +117,19 @@ py_binary(
     deps = [],
 )
 
-filegroup(
-    name = "all_tests",
-    srcs = glob(["test_*.py"])
-)
-
-py_pytest_test(
-    name = "test_w_pytest",
-    size = "small",
-    srcs = ["//python-solutions:all_tests"],
-    deps = [
-        "//python-solutions/util:test",
-        "@my_deps_exceptiongroup//:pkg",
-        "@my_deps_pytest//:pkg",
-    ]
-
-)
+#filegroup(
+#    name = "all_tests",
+#    srcs = glob(["test_*.py"])
+#)
+#
+#py_pytest_test(
+#    name = "test_w_pytest",
+#    size = "small",
+#    srcs = ["//python-solutions:all_tests"],
+#    deps = [
+#        "//python-solutions/util:test",
+#        "@my_deps_exceptiongroup//:pkg",
+#        "@my_deps_pytest//:pkg",
+#    ]
+#
+#)

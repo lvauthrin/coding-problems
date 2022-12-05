@@ -19,4 +19,5 @@ def create(*args) -> Node:
   for index in range(len(args) - 1, -1, -1):
     head = Node(args[index], head)
 
+  print(f"Created: {head}")
   return head
