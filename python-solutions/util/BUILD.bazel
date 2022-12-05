@@ -1,0 +1,11 @@
+package(default_visibility = ["//visibility:public"])
+
+py_library(
+    name = "linked_list",
+    srcs = ["linked_list.py"]
+)
+
+py_library(
+    name = "test",
+    srcs = ["test.py"]
+)
