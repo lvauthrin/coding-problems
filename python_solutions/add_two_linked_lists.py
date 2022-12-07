@@ -1,5 +1,4 @@
-from util import test
-from util import linked_list
+from python_solutions.util import linked_list
 
 def solve(first, second):
   head = result = linked_list.create(None)
