@@ -1,30 +1,31 @@
 from typing import List
 
+
 def solve(prices: List[int]) -> int:
-  if 0 <= len(prices) <= 1:
-    return 0
+    if 0 <= len(prices) <= 1:
+        return 0
 
-  min_index = 0
-  cur_min = prices[min_index]
-  max_index = cur_max = 0
-  
-  for i in range(1, len(prices)):
-    if prices[i] <= cur_min:
-      min_index = i
-      cur_min = prices[min_index]
-    else:
-      diff = prices[i] - cur_min
+    min_index = 0
+    cur_min = prices[min_index]
+    cur_max = 0
 
-      if diff > cur_max:
-        max_index = i
-        cur_max = diff
+    for i in range(1, len(prices)):
+        if prices[i] <= cur_min:
+            min_index = i
+            cur_min = prices[min_index]
+        else:
+            diff = prices[i] - cur_min
 
-  return cur_max
+            if diff > cur_max:
+                cur_max = diff
+
+    return cur_max
+
 
 # Keep track of cur_min, if we ever drop below that then we reset
 # Otherwise, we get the max difference between cur value and cur_min
 #
-#  
+#
 # [7,1,5,3,6,4]
 # cur_min = 0
 # max_diff = 0

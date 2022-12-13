@@ -5,83 +5,87 @@ Leetcode: https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-p
 from typing import Optional
 from collections import deque
 
+
 class Node:
-  """ Node class """
-  def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None):
-    self.val = val
-    self.left = left
-    self.right = right
+    """Node class"""
 
-class Solution: # pylint: disable=too-few-public-methods
-  """ solution class """
+    def __init__(self, val: int = 0, left: "Node" = None, right: "Node" = None):
+        self.val = val
+        self.left = left
+        self.right = right
 
-  def is_tree_symmetric_recursive(self, root: Optional[Node]) -> bool:
-    """ main method recursive """
-    if root.left is None and root.right is None:
-      return True
-    if root.left is None or root.right is None:
-      return False
 
-    return self.check_nodes(root.left, root.right)
+class Solution:  # pylint: disable=too-few-public-methods
+    """solution class"""
 
-  def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
-    """ main method iterative """
+    def is_tree_symmetric_recursive(self, root: Optional[Node]) -> bool:
+        """main method recursive"""
+        if root.left is None and root.right is None:
+            return True
+        if root.left is None or root.right is None:
+            return False
 
-    if root is None:
-      return False
+        return self.check_nodes(root.left, root.right)
 
-    next_level = deque([root])
-    level = deque()
+    def is_tree_symmetric_iterative(self, root: Optional[Node]) -> bool:
+        """main method iterative"""
 
-    while len(next_level) > 0:
-      while len(next_level) > 0:
-        node = next_level.popleft()
-        if node is not None:
-          level.append(node.right)
-          level.append(node.left)
+        if root is None:
+            return False
 
-      i, j = 0, len(level) - 1
+        next_level = deque([root])
+        level = deque()
 
-      while i <= j:
-        left_none = level[i] is None and level[j] is not None
-        right_none = level[i] is not None and level[j] is None
-        not_none = level[i] is not None and level[j] is not None
-        not_equal = not_none and level[i].val != level[j].val
-        if left_none or right_none or not_equal:
-          return False
+        while len(next_level) > 0:
+            while len(next_level) > 0:
+                node = next_level.popleft()
+                if node is not None:
+                    level.append(node.right)
+                    level.append(node.left)
 
-        i += 1
-        j -= 1
+            i, j = 0, len(level) - 1
 
-      next_level = level
-      level = deque()
+            while i <= j:
+                left_none = level[i] is None and level[j] is not None
+                right_none = level[i] is not None and level[j] is None
+                not_none = level[i] is not None and level[j] is not None
+                not_equal = not_none and level[i].val != level[j].val
+                if left_none or right_none or not_equal:
+                    return False
 
-    return True
+                i += 1
+                j -= 1
 
-  def check_nodes(self, left, right):
-    """ check nodes recursively """
-    if left.val != right.val:
-      return False
-    result = True
+            next_level = level
+            level = deque()
 
-    if left.left is None and right.right is not None:
-      return False
-    if left.left is not None and right.right is None:
-      return False
-    if left.right is None and right.left is not None:
-      return False
-    if left.right is not None and right.left is None:
-      return False
+        return True
 
-    if left.left is not None and right.right is not None:
-      result = result and self.check_nodes(left.left, right.right)
-    if left.right is not None and right.left is not None:
-      result = result and self.check_nodes(left.right, right.left)
+    def check_nodes(self, left, right):
+        """check nodes recursively"""
+        if left.val != right.val:
+            return False
+        result = True
 
-    return result
+        if left.left is None and right.right is not None:
+            return False
+        if left.left is not None and right.right is None:
+            return False
+        if left.right is None and right.left is not None:
+            return False
+        if left.right is not None and right.left is None:
+            return False
+
+        if left.left is not None and right.right is not None:
+            result = result and self.check_nodes(left.left, right.right)
+        if left.right is not None and right.left is not None:
+            result = result and self.check_nodes(left.right, right.left)
+
+        return result
+
 
 def __main__():
-  tester = Solution()
+    tester = Solution()
 
-  tree1 = Node(Node(1), Node(1))
-  tester.is_tree_symmetric_recursive(tree1)
+    tree1 = Node(Node(1), Node(1))
+    tester.is_tree_symmetric_recursive(tree1)

@@ -1,0 +1,1 @@
+bazelisk run requirements.update

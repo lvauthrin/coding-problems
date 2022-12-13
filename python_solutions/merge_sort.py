@@ -1,11 +1,12 @@
 def merge_sort(nums):
-  if len(nums) <= 1:
-    return nums
+    if len(nums) <= 1:
+        return nums
 
-  pivot = len(nums) // 2
-  left = merge_sort(nums[0:])
 
-#def merge_sort(nums):
+#    pivot = len(nums) // 2
+#    left = merge_sort(nums[0:])
+
+# def merge_sort(nums):
 #    # bottom cases: empty or list of a single element.
 #    if len(nums) <= 1:
 #        return nums
@@ -16,7 +17,7 @@ def merge_sort(nums):
 #    return merge(left_list, right_list)
 #
 #
-#def merge(left_list, right_list):
+# def merge(left_list, right_list):
 #    left_cursor = right_cursor = 0
 #    ret = []
 #    while left_cursor < len(left_list) and right_cursor < len(right_list):
@@ -26,13 +27,13 @@ def merge_sort(nums):
 #        else:
 #            ret.append(right_list[right_cursor])
 #            right_cursor += 1
-#    
+#
 #    # append what is remained in either of the lists
 #    ret.extend(left_list[left_cursor:])
 #    ret.extend(right_list[right_cursor:])
-#    
+#
 #    return ret
 #
-#if __name__ == "__main__":
+# if __name__ == "__main__":
 #  main()
 #  print("main completed")
