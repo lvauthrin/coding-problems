@@ -1,0 +1,24 @@
+load("@pip//:requirements.bzl", "requirement")
+
+# NOTE: This package does not work.  To run jupyterlab, you need to "install" it and so it launch the build artifacts.
+# You can use the "jupyter lab build" command, however that requires nodejs to be installed
+
+# This binary allows you to run commands like "Jupyter lab build" -> "bazel run //tools/jupyterlab build"
+py_binary(
+    name = "jupyterlab",
+    srcs = ["main.py"],
+    main = "main.py",
+    deps = [
+        requirement("jupyterlab"),
+    ],
+)
+
+# This binary allows you to run commands like "Jupyter --paths" -> "bazel run //tools/jupyter --paths"
+py_binary(
+    name = "jupyter",
+    srcs = ["jupyter.py"],
+    main = "jupyter.py",
+    deps = [
+        requirement("jupyterlab"),
+    ],
+)
