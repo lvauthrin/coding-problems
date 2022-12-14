@@ -1,7 +1,6 @@
 import sys
 import pytest
 from python_solutions import candy_crush
-from python_solutions.util import test
 
 
 def test_nominal():

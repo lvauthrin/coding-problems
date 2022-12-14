@@ -7,7 +7,7 @@ class Node:
         return f"({self.value}) -> {None if self.link is None else self.link.__repr__()}"
 
     def __eq__(self, __o: object) -> bool:
-        if self.link != __o.link:
+        if __o is None or self.link != __o.link:
             return False
 
         return self.value == __o.value and self.link.__eq__(__o.link)

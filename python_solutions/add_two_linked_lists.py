@@ -27,4 +27,7 @@ def solve(first, second):
         result.link = linked_list.Node(total)
         result = result.link
 
+    if carry > 0:
+        result.link = linked_list.Node(carry)
+
     return head.link

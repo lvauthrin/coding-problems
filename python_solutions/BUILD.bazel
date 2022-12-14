@@ -1,17 +1,50 @@
 load("@pip//:requirements.bzl", "requirement")
 load("@rules_python//python:defs.bzl", "py_library")
-load(":generate_files.bzl", "py_library_test")
+load(":generate_files.bzl", "py_library_test", "py_library_with_test")
 #load("//pytest_wrapper:defs.bzl", "py_pytest_test")
 
+
+filegroup(
+  name = "test-files",
+  srcs = glob(["test/*_test.py"]),
+)
+
+filegroup(
+  name = "solution-files",
+  srcs = glob(["*.py"]),
+)
 
 py_library_test(
     name = "add_two_linked_lists",
     deps = ["//python_solutions/util:linked_list"],
     test_deps = [
         "//python_solutions/util:linked_list", 
-        "//python_solutions/util:test"
     ],
 )
+
+# NOTE: To speed up the build, I've created a single task to reduce the number of invocation of the Python interpreter
+# Although this seems faster, this requires re-specifying all srcs and tests which I'm not sure is right
+#
+#py_test(
+#  name="all-tests",
+#  main="runner.py",
+#  srcs=["runner.py", ":test-files"],
+#  args=["--color=yes", "$(locations :test-files)"],
+#  deps=[
+#    requirement("pytest"),
+#    "//python_solutions/util:linked_list", 
+#    "add_two_linked_lists",
+#    "candy_crush",
+#    "delete_middle_node_linked_list",
+#    "is_matrix_monotonic",
+#    "longest_common_prefix",
+#    "max_profit",
+#    "spiral_order_matrix",
+#    "toeplitz_matrix",
+#    "two_sum",
+#    "valid_parens",
+#  ]
+#)
 
 py_library(
     name="binary_trees_are_identical",
@@ -27,7 +60,6 @@ py_library_test(
     name="candy_crush",
     test_deps = [
         "//python_solutions/util:linked_list", 
-        "//python_solutions/util:test"
     ],
 )
 
@@ -46,15 +78,11 @@ py_library_test(
     deps = ["//python_solutions/util:linked_list"],
     test_deps = [
         "//python_solutions/util:linked_list", 
-        "//python_solutions/util:test"
     ],
 )
 
 py_library_test(
     name = "find_matrix_monotonic",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
 )
 
 py_library(
@@ -69,71 +97,53 @@ py_library(
 
 py_library_test(
     name = "is_matrix_monotonic",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
 )
 
 py_library_test(
     name = "longest_common_prefix",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
 )
 
 py_library(
     name="max_consecutive_ones",
     srcs = ["max_consecutive_ones.py"],
-    deps = [],
 )
 
 py_library_test(
     name = "max_profit",
-    test_deps = [
-        "//python_solutions/util:test",
-    ],
 )
 
 py_library(
     name="maximize_array_sum",
     srcs = ["maximize_array_sum.py"],
-    deps = [],
 )
 
 py_library(
     name="merge_intervals",
     srcs = ["merge_intervals.py"],
-    deps = [],
 )
 
 py_library(
     name="merge_sort",
     srcs = ["merge_sort.py"],
-    deps = [],
 )
 
 py_library(
     name="merged_two_sorted_linked_list",
     srcs = ["merged_two_sorted_linked_list.py"],
-    deps = [],
 )
 
 py_library(
     name="mirror_binary_tree",
     srcs = ["mirror_binary_tree.py"],
-    deps = [],
 )
 
 py_library_test(
     name = "spiral_order_matrix",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
 )
+
 py_library(
     name="subsets",
     srcs = ["subsets.py"],
-    deps = [],
 )
 
 py_library(
@@ -145,16 +155,12 @@ py_library_test(
     name = "toeplitz_matrix",
 )
 
-py_library(
-    name="three_sum",
-    srcs = ["three_sum.py"],
+py_library_test(
+    name = "two_sum",
 )
 
 py_library_test(
-    name = "two_sum",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
+    name = "three_sum",
 )
 
 py_library(
@@ -164,8 +170,5 @@ py_library(
 
 py_library_test(
     name = "valid_parens",
-    test_deps = [
-      "//python_solutions/util:test",
-    ],
 )
 
