@@ -6,9 +6,6 @@ class ReprType:
     IN_ORDER = 2
 
 
-"""doc"""
-
-
 class Tree:
     def __init__(self, value, left=None, right=None, repr_mode=ReprType.BFS):
         self.value = value
