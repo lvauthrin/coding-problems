@@ -23,4 +23,3 @@ def py_pytest_test(name, srcs, deps = [], args = [], **kwargs):
         ],
         **kwargs
     )
-

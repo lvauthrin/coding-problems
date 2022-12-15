@@ -150,8 +150,8 @@ http_archive(
     sha256 = "0aa7df8289c957a4c54cbe694fbabe99b180e64ca0f8fdb5e2f76dcf56ff2422",
     strip_prefix = "protobuf-21.9",
     urls = [
-# The mirror didn't have this package - 404
-#        "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.9.tar.gz",
+        # The mirror didn't have this package - 404
+        #        "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.9.tar.gz",
         "https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.9.tar.gz",
     ],
 )
@@ -232,4 +232,3 @@ load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 rules_pkg_dependencies()
 
 _py_image_repos()
-

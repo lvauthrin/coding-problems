@@ -3,23 +3,22 @@ load("@rules_python//python:defs.bzl", "py_library")
 load(":generate_files.bzl", "py_library_test")
 #load("//pytest_wrapper:defs.bzl", "py_pytest_test")
 
-
 filegroup(
-  name = "test-files",
-  srcs = glob(["test/*_test.py"]),
+    name = "test-files",
+    srcs = glob(["test/*_test.py"]),
 )
 
 filegroup(
-  name = "solution-files",
-  srcs = glob(["*.py"]),
+    name = "solution-files",
+    srcs = glob(["*.py"]),
 )
 
 py_library_test(
     name = "add_two_linked_lists",
-    deps = ["//python_solutions/util:linked_list"],
     test_deps = [
-        "//python_solutions/util:linked_list", 
+        "//python_solutions/util:linked_list",
     ],
+    deps = ["//python_solutions/util:linked_list"],
 )
 
 # NOTE: To speed up the build, I've created a single task to reduce the number of invocation of the Python interpreter
@@ -32,7 +31,7 @@ py_library_test(
 #  args=["--color=yes", "$(locations :test-files)"],
 #  deps=[
 #    requirement("pytest"),
-#    "//python_solutions/util:linked_list", 
+#    "//python_solutions/util:linked_list",
 #    "add_two_linked_lists",
 #    "candy_crush",
 #    "delete_middle_node_linked_list",
@@ -47,49 +46,49 @@ py_library_test(
 #)
 
 py_library_test(
-    name="binary_trees_are_identical",
-    deps = ["//python_solutions/util:tree"],
+    name = "binary_trees_are_identical",
     test_deps = [
-        "//python_solutions/util:tree", 
+        "//python_solutions/util:tree",
     ],
+    deps = ["//python_solutions/util:tree"],
 )
 
 py_library_test(
-    name="binary_tree_to_linked_list",
-    deps = ["//python_solutions/util:tree"],
+    name = "binary_tree_to_linked_list",
     test_deps = [
-        "//python_solutions/util:tree", 
+        "//python_solutions/util:tree",
     ],
+    deps = ["//python_solutions/util:tree"],
 )
 
 py_library(
-    name="buildings_with_ocean_view",
+    name = "buildings_with_ocean_view",
     srcs = ["buildings_with_ocean_view.py"],
 )
 
 py_library_test(
-    name="candy_crush",
+    name = "candy_crush",
     test_deps = [
-        "//python_solutions/util:linked_list", 
+        "//python_solutions/util:linked_list",
     ],
 )
 
 py_library(
-    name="climb_stairs_by_n_steps",
+    name = "climb_stairs_by_n_steps",
     srcs = ["climb_stairs_by_n_steps.py"],
 )
 
 py_library(
-    name="construct_string",
+    name = "construct_string",
     srcs = ["construct_string.py"],
 )
 
 py_library_test(
     name = "delete_middle_node_linked_list",
-    deps = ["//python_solutions/util:linked_list"],
     test_deps = [
-        "//python_solutions/util:linked_list", 
+        "//python_solutions/util:linked_list",
     ],
+    deps = ["//python_solutions/util:linked_list"],
 )
 
 py_library_test(
@@ -97,12 +96,12 @@ py_library_test(
 )
 
 py_library(
-    name="grid_traveler",
+    name = "grid_traveler",
     srcs = ["grid_traveler.py"],
 )
 
 py_library(
-    name="is_tree_symmetric",
+    name = "is_tree_symmetric",
     srcs = ["is_tree_symmetric.py"],
 )
 
@@ -119,7 +118,7 @@ py_library_test(
 )
 
 py_library(
-    name="max_consecutive_ones",
+    name = "max_consecutive_ones",
     srcs = ["max_consecutive_ones.py"],
 )
 
@@ -128,7 +127,7 @@ py_library_test(
 )
 
 py_library_test(
-    name="maximum_subarray",
+    name = "maximum_subarray",
 )
 
 #py_library(
@@ -136,22 +135,22 @@ py_library_test(
 #)
 
 py_library(
-    name="merge_intervals",
+    name = "merge_intervals",
     srcs = ["merge_intervals.py"],
 )
 
 py_library(
-    name="merge_sort",
+    name = "merge_sort",
     srcs = ["merge_sort.py"],
 )
 
 py_library(
-    name="merged_two_sorted_linked_list",
+    name = "merged_two_sorted_linked_list",
     srcs = ["merged_two_sorted_linked_list.py"],
 )
 
 py_library(
-    name="mirror_binary_tree",
+    name = "mirror_binary_tree",
     srcs = ["mirror_binary_tree.py"],
 )
 
@@ -160,12 +159,12 @@ py_library_test(
 )
 
 py_library(
-    name="subsets",
+    name = "subsets",
     srcs = ["subsets.py"],
 )
 
 py_library(
-    name="sum_to",
+    name = "sum_to",
     srcs = ["sum_to.py"],
 )
 
@@ -182,11 +181,10 @@ py_library_test(
 )
 
 py_library(
-    name="two_city_scheduling",
+    name = "two_city_scheduling",
     srcs = ["two_city_scheduling.py"],
 )
 
 py_library_test(
     name = "valid_parens",
 )
-
