@@ -6,16 +6,11 @@ from python_solutions import binary_tree_to_linked_list as sol
 
 data = [
     (
-        tree.Tree(1,
-                  tree.Tree(2,
-                            tree.Tree(3),
-                            tree.Tree(4)
-                           ),
-                  tree.Tree(5,
-                            None,
-                            tree.Tree(6)
-                           ),
-                 ),
+        tree.Tree(
+            1,
+            tree.Tree(2, tree.Tree(3), tree.Tree(4)),
+            tree.Tree(5, None, tree.Tree(6)),
+        ),
     ),
 ]
 

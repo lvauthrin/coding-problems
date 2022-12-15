@@ -1,5 +1,5 @@
-# url: 
-# difficulty: 
+# url:
+# difficulty:
 
 from typing import List
 
