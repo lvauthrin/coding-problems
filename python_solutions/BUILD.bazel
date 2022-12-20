@@ -20,6 +20,11 @@ filegroup(
 )
 
 py_solution(
+    name = "reverse_integer",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
     name = "number_of_islands",
     template = ":_one_parameter_test",
 )
