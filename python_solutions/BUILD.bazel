@@ -1,6 +1,7 @@
 load("@pip//:requirements.bzl", "requirement")
 load("@rules_python//python:defs.bzl", "py_library")
-load(":generate_files.bzl", "py_library_test")
+load(":generate_files.bzl", "py_library_test", "py_solution")
+#load(":generator.bzl", "generate_code")
 #load("//pytest_wrapper:defs.bzl", "py_pytest_test")
 
 filegroup(
@@ -9,8 +10,19 @@ filegroup(
 )
 
 filegroup(
-    name = "solution-files",
-    srcs = glob(["*.py"]),
+    name = "_one_parameter_test",
+    srcs =  ["test/_one_param_test.tmpl"],
+)
+
+filegroup(
+    name = "_two_parameter_test",
+    srcs =  ["test/_two_param_test.tmpl"],
+)
+
+py_solution(
+    name = "number_of_islands",
+    template = ":_one_parameter_test",
+    data = "test/number_of_islands.json"
 )
 
 py_library_test(
@@ -53,13 +65,13 @@ py_library_test(
     deps = ["//python_solutions/util:tree"],
 )
 
-py_library_test(
-    name = "binary_tree_to_linked_list",
-    test_deps = [
-        "//python_solutions/util:tree",
-    ],
-    deps = ["//python_solutions/util:tree"],
-)
+#py_library_test(
+#    name = "binary_tree_to_linked_list",
+#    test_deps = [
+#        "//python_solutions/util:tree",
+#    ],
+#    deps = ["//python_solutions/util:tree"],
+#)
 
 py_library(
     name = "buildings_with_ocean_view",
