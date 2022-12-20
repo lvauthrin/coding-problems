@@ -36,7 +36,6 @@ def py_library_test(name, data = None, deps = None, test_deps = None):
     )
 
 def _generate_code_impl(ctx):
-    print(ctx.file.data.path)
     ctx.actions.expand_template(
         template = ctx.file.template,
         output = ctx.outputs.source_file,

@@ -22,7 +22,6 @@ filegroup(
 py_solution(
     name = "number_of_islands",
     template = ":_one_parameter_test",
-    data = "test/number_of_islands.json"
 )
 
 py_library_test(
@@ -65,13 +64,13 @@ py_library_test(
     deps = ["//python_solutions/util:tree"],
 )
 
-#py_library_test(
-#    name = "binary_tree_to_linked_list",
-#    test_deps = [
-#        "//python_solutions/util:tree",
-#    ],
-#    deps = ["//python_solutions/util:tree"],
-#)
+py_library_test(
+    name = "binary_tree_to_linked_list",
+    test_deps = [
+        "//python_solutions/util:tree",
+    ],
+    deps = ["//python_solutions/util:tree"],
+)
 
 py_library(
     name = "buildings_with_ocean_view",

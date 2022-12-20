@@ -11,6 +11,7 @@ data = [
             tree.Tree(2, tree.Tree(3), tree.Tree(4)),
             tree.Tree(5, None, tree.Tree(6)),
         ),
+        False
     ),
 ]
 
