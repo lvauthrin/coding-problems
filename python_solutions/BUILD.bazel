@@ -20,12 +20,32 @@ filegroup(
 )
 
 py_solution(
+    name = "product_array_self",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
+    name = "happy_number",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
     name = "reverse_integer",
     template = ":_one_parameter_test",
 )
 
 py_solution(
+    name = "move_zeros",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
     name = "number_of_islands",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
+    name = "valid_sudoku",
     template = ":_one_parameter_test",
 )
 
@@ -150,9 +170,9 @@ py_library_test(
 #    name="maximize_array_sum",
 #)
 
-py_library(
+py_solution(
     name = "merge_intervals",
-    srcs = ["merge_intervals.py"],
+    template = ":_one_parameter_test"
 )
 
 py_library(

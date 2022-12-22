@@ -1,13 +1,17 @@
 class Node:
-    def __init__(self, value, link=None):
+    def __init__(self, value, link=None, prev=None):
         self.value = value
         self.link = link
+        self.prev = prev
 
     def __repr__(self) -> str:
-        return f"({self.value}) -> {None if self.link is None else self.link.__repr__()}"
+        if self.link is None:
+            return f"({self.value}) -> None"
+        else:
+            return f"({self.value}) {'<->' if self.link.prev == self else '->'} {self.link.__repr__()}"
 
     def __eq__(self, __o: object) -> bool:
-        if __o is None or self.link != __o.link:
+        if __o is None:
             return False
 
         return self.value == __o.value and self.link.__eq__(__o.link)
@@ -18,6 +22,9 @@ def create(*args) -> Node:
     head = None
 
     for index in range(len(args) - 1, -1, -1):
+        prev = head
         head = Node(args[index], head)
+        if prev is not None:
+            prev.prev = head
 
     return head
