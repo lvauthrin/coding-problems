@@ -20,6 +20,21 @@ filegroup(
 )
 
 py_solution(
+    name = "container_most_water",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
+    name = "longest_palindromic_substring",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
+    name = "decode_string",
+    template = ":_one_parameter_test",
+)
+
+py_solution(
     name = "product_array_self",
     template = ":_one_parameter_test",
 )
