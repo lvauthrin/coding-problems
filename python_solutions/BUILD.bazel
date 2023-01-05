@@ -20,6 +20,11 @@ filegroup(
 )
 
 py_solution(
+    name = "search_rotated_sorted_array",
+    template = ":_two_parameter_test",
+)
+
+py_solution(
     name = "container_most_water",
     template = ":_one_parameter_test",
 )

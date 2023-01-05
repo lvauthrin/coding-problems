@@ -1,0 +1,10 @@
+java_binary(
+  name = "SearchRotatedSortedArray",
+  srcs = ["SearchRotatedSortedArray.java"]
+)
+
+java_binary(
+  name = "CombinationSum",
+  srcs = ["CombinationSum.java"]
+)
+
