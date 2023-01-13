@@ -1,10 +1,108 @@
 java_binary(
-  name = "SearchRotatedSortedArray",
-  srcs = ["SearchRotatedSortedArray.java"]
+  name = "BinaryTreeLevelOrderTraversal",
+  srcs = ["BinaryTreeLevelOrderTraversal.java"],
+  deps = [":TreeNode"]
 )
 
 java_binary(
   name = "CombinationSum",
   srcs = ["CombinationSum.java"]
+)
+
+java_binary(
+  name = "CombinationsOfPhoneNumber",
+  srcs = ["CombinationsOfPhoneNumber.java"]
+)
+
+java_binary(
+  name = "FindPivotIndex",
+  srcs = ["FindPivotIndex.java"]
+)
+
+java_binary(
+  name = "FizzBuzzMultiThreaded",
+  srcs = ["FizzBuzzMultiThreaded.java"]
+)
+
+java_binary(
+  name = "IsoMorphicStrings",
+  srcs = ["IsoMorphicStrings.java"]
+)
+
+java_binary(
+  name = "IsSubsequence",
+  srcs = ["IsSubsequence.java"]
+)
+
+java_binary(
+  name = "KClosestToOrigin",
+  srcs = ["KClosestToOrigin.java"]
+)
+
+java_binary(
+  name = "LongestSubstringWithoutRepeating",
+  srcs = ["LongestSubstringWithoutRepeating.java"]
+)
+
+java_library(
+  name = "ListNode",
+  srcs = ["ListNode.java"]
+)
+
+java_binary(
+  name = "MatrixDistanceToClosestZero",
+  srcs = ["MatrixDistanceToClosestZero.java"]
+)
+
+java_binary(
+  name = "PrintFooBarAlternately",
+  srcs = ["PrintFooBarAlternately.java"]
+)
+
+java_binary(
+  name = "PrintInOrder",
+  srcs = ["PrintInOrder.java"]
+)
+
+java_binary(
+  name = "RandomPickWithWeight",
+  srcs = ["RandomPickWithWeight.java"],
+)
+
+java_binary(
+  name = "RomanNumeralToInt",
+  srcs = ["RomanNumeralToInt.java"],
+)
+
+java_binary(
+  name = "ReverseLinkedList",
+  srcs = ["ReverseLinkedList.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
+  name = "ReverseLinkedListII",
+  srcs = ["ReverseLinkedListII.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
+  name = "SearchRotatedSortedArray",
+  srcs = ["SearchRotatedSortedArray.java"]
+)
+
+java_library(
+  name = "TreeNode",
+  srcs = ["TreeNode.java"]
+)
+
+java_binary(
+  name = "ThreeSum",
+  srcs = ["ThreeSum.java"]
+)
+
+java_binary(
+  name = "WordBreak",
+  srcs = ["WordBreak.java"]
 )
 
