@@ -5,6 +5,12 @@ java_binary(
 )
 
 java_binary(
+  name = "CloneGraph",
+  srcs = ["CloneGraph.java"],
+  deps = [":Node"]
+)
+
+java_binary(
   name = "CombinationSum",
   srcs = ["CombinationSum.java"]
 )
@@ -12,6 +18,11 @@ java_binary(
 java_binary(
   name = "CombinationsOfPhoneNumber",
   srcs = ["CombinationsOfPhoneNumber.java"]
+)
+
+java_binary(
+  name = "CoinChange",
+  srcs = ["CoinChange.java"]
 )
 
 java_binary(
@@ -40,8 +51,19 @@ java_binary(
 )
 
 java_binary(
+  name = "LinkedListCycleII",
+  srcs = ["LinkedListCycleII.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
   name = "LongestSubstringWithoutRepeating",
   srcs = ["LongestSubstringWithoutRepeating.java"]
+)
+
+java_binary(
+  name = "LongestPalindrome",
+  srcs = ["LongestPalindrome.java"]
 )
 
 java_library(
@@ -52,6 +74,32 @@ java_library(
 java_binary(
   name = "MatrixDistanceToClosestZero",
   srcs = ["MatrixDistanceToClosestZero.java"]
+)
+
+java_binary(
+  name = "MinStack",
+  srcs = ["MinStack.java"]
+)
+
+java_binary(
+  name = "MiddleOfLinkedList",
+  srcs = ["MiddleOfLinkedList.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
+  name = "NaryTreePreorderTraversal",
+  srcs = ["NaryTreePreorderTraversal.java"],
+)
+
+java_library(
+  name = "Node",
+  srcs = ["Node.java"]
+)
+
+java_library(
+  name = "Pair",
+  srcs = ["Pair.java"]
 )
 
 java_binary(
@@ -67,6 +115,11 @@ java_binary(
 java_binary(
   name = "RandomPickWithWeight",
   srcs = ["RandomPickWithWeight.java"],
+)
+
+java_binary(
+  name = "ReversePolishNotation",
+  srcs = ["ReversePolishNotation.java"],
 )
 
 java_binary(
@@ -87,13 +140,13 @@ java_binary(
 )
 
 java_binary(
-  name = "SearchRotatedSortedArray",
-  srcs = ["SearchRotatedSortedArray.java"]
+  name = "ScheduleOrder",
+  srcs = ["ScheduleOrder.java"]
 )
 
-java_library(
-  name = "TreeNode",
-  srcs = ["TreeNode.java"]
+java_binary(
+  name = "SearchRotatedSortedArray",
+  srcs = ["SearchRotatedSortedArray.java"]
 )
 
 java_binary(
@@ -101,8 +154,23 @@ java_binary(
   srcs = ["ThreeSum.java"]
 )
 
+java_library(
+  name = "TreeNode",
+  srcs = ["TreeNode.java"]
+)
+
+java_library(
+  name = "Trie",
+  srcs = ["Trie.java"]
+)
+
 java_binary(
   name = "WordBreak",
   srcs = ["WordBreak.java"]
 )
 
+java_binary(
+  name = "WordLadder",
+  srcs = ["WordLadder.java"],
+  deps = [":Pair"]
+)
