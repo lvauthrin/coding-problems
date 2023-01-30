@@ -110,6 +110,11 @@ java_binary(
 )
 
 java_binary(
+  name = "MaxConsecutiveOnes",
+  srcs = ["MaxConsecutiveOnes.java"]
+)
+
+java_binary(
   name = "MaximumProfitJobScheduling",
   srcs = ["MaximumProfitJobScheduling.java"]
 )
