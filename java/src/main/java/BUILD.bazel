@@ -1,6 +1,18 @@
 java_binary(
+  name = "BestTimeBuySellStock",
+  srcs = ["BestTimeBuySellStock.java"],
+  deps = [":TreeNode"]
+)
+
+java_binary(
   name = "BinaryTreeLevelOrderTraversal",
   srcs = ["BinaryTreeLevelOrderTraversal.java"],
+  deps = [":TreeNode"]
+)
+
+java_binary(
+  name = "BinaryTreeRightSideView",
+  srcs = ["BinaryTreeRightSideView.java"],
   deps = [":TreeNode"]
 )
 
@@ -23,6 +35,21 @@ java_binary(
 java_binary(
   name = "CoinChange",
   srcs = ["CoinChange.java"]
+)
+
+java_binary(
+  name = "EditDistance",
+  srcs = ["EditDistance.java"]
+)
+
+java_binary(
+  name = "FindAllAnagramsInString",
+  srcs = ["FindAllAnagramsInString.java"]
+)
+
+java_binary(
+  name = "FindMedianOfStreams",
+  srcs = ["FindMedianOfStreams.java"]
 )
 
 java_binary(
@@ -66,14 +93,42 @@ java_binary(
   srcs = ["LongestPalindrome.java"]
 )
 
-java_library(
-  name = "ListNode",
-  srcs = ["ListNode.java"]
+java_binary(
+  name = "LongestPalindromicSubstring",
+  srcs = ["LongestPalindromicSubstring.java"]
+)
+
+java_binary(
+  name = "LowestCommonAncestor",
+  srcs = ["LowestCommonAncestor.java"],
+  deps = [":TreeNode"]
 )
 
 java_binary(
   name = "MatrixDistanceToClosestZero",
   srcs = ["MatrixDistanceToClosestZero.java"]
+)
+
+java_binary(
+  name = "MaximumProfitJobScheduling",
+  srcs = ["MaximumProfitJobScheduling.java"]
+)
+
+java_binary(
+  name = "MergeIntervals",
+  srcs = ["MergeIntervals.java"],
+)
+
+java_binary(
+  name = "MergeKSortedLists",
+  srcs = ["MergeKSortedLists.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
+  name = "MergeTwoSortedLists",
+  srcs = ["MergeTwoSortedLists.java"],
+  deps = [":ListNode"]
 )
 
 java_binary(
@@ -92,14 +147,19 @@ java_binary(
   srcs = ["NaryTreePreorderTraversal.java"],
 )
 
-java_library(
-  name = "Node",
-  srcs = ["Node.java"]
+java_binary(
+  name = "NumberOfIslands",
+  srcs = ["NumberOfIslands.java"],
 )
 
-java_library(
-  name = "Pair",
-  srcs = ["Pair.java"]
+java_binary(
+  name = "NumberOfOneBits",
+  srcs = ["NumberOfOneBits.java"],
+)
+
+java_binary(
+  name = "Permutations",
+  srcs = ["Permutations.java"],
 )
 
 java_binary(
@@ -140,6 +200,11 @@ java_binary(
 )
 
 java_binary(
+  name = "RottenOranges",
+  srcs = ["RottenOranges.java"],
+)
+
+java_binary(
   name = "ScheduleOrder",
   srcs = ["ScheduleOrder.java"]
 )
@@ -150,18 +215,54 @@ java_binary(
 )
 
 java_binary(
+  name = "SerializeAndDeserializeBinaryTree",
+  srcs = ["SerializeAndDeserializeBinaryTree.java"],
+  deps = ["TreeNode"]
+)
+
+java_binary(
+  name = "SingleNumber",
+  srcs = ["SingleNumber.java"]
+)
+
+java_binary(
+  name = "SortColors",
+  srcs = ["SortColors.java"]
+)
+
+java_binary(
+  name = "SpiralMatrix",
+  srcs = ["SpiralMatrix.java"]
+)
+
+java_binary(
+  name = "SpiralMatrixII",
+  srcs = ["SpiralMatrixII.java"]
+)
+
+java_binary(
+  name = "StringToInteger",
+  srcs = ["StringToInteger.java"]
+)
+
+java_binary(
+  name = "Subsets",
+  srcs = ["Subsets.java"]
+)
+
+java_binary(
+  name = "SubsetsII",
+  srcs = ["SubsetsII.java"]
+)
+
+java_binary(
   name = "ThreeSum",
   srcs = ["ThreeSum.java"]
 )
 
-java_library(
-  name = "TreeNode",
-  srcs = ["TreeNode.java"]
-)
-
-java_library(
-  name = "Trie",
-  srcs = ["Trie.java"]
+java_binary(
+  name = "WildCardMatching",
+  srcs = ["WildCardMatching.java"]
 )
 
 java_binary(
@@ -174,3 +275,39 @@ java_binary(
   srcs = ["WordLadder.java"],
   deps = [":Pair"]
 )
+
+java_binary(
+  name = "WordSearch",
+  srcs = ["WordSearch.java"],
+)
+
+java_library(
+  name = "ListNode",
+  srcs = ["ListNode.java"]
+)
+
+java_library(
+  name = "Node",
+  srcs = ["Node.java"]
+)
+
+java_library(
+  name = "Pair",
+  srcs = ["Pair.java"]
+)
+
+java_library(
+  name = "TrappingRainWater",
+  srcs = ["TrappingRainWater.java"]
+)
+
+java_library(
+  name = "TreeNode",
+  srcs = ["TreeNode.java"]
+)
+
+java_library(
+  name = "Trie",
+  srcs = ["Trie.java"]
+)
+
