@@ -73,6 +73,11 @@ java_binary(
 )
 
 java_binary(
+  name = "KthLargestInStream",
+  srcs = ["KthLargestInStream.java"]
+)
+
+java_binary(
   name = "KClosestToOrigin",
   srcs = ["KClosestToOrigin.java"]
 )
@@ -258,6 +263,11 @@ java_binary(
 java_binary(
   name = "SubsetsII",
   srcs = ["SubsetsII.java"]
+)
+
+java_binary(
+  name = "TokenBucketRateLimiter",
+  srcs = ["TokenBucketRateLimiter.java"]
 )
 
 java_binary(
