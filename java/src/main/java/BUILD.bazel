@@ -17,6 +17,11 @@ java_binary(
 )
 
 java_binary(
+  name = "ClimbingStairs",
+  srcs = ["ClimbingStairs.java"],
+)
+
+java_binary(
   name = "CloneGraph",
   srcs = ["CloneGraph.java"],
   deps = [":Node"]
@@ -35,6 +40,11 @@ java_binary(
 java_binary(
   name = "CoinChange",
   srcs = ["CoinChange.java"]
+)
+
+java_binary(
+  name = "DesignTwitter",
+  srcs = ["DesignTwitter.java"]
 )
 
 java_binary(
@@ -78,6 +88,11 @@ java_binary(
 )
 
 java_binary(
+  name = "KthLargestElementInArray",
+  srcs = ["KthLargestElementInArray.java"]
+)
+
+java_binary(
   name = "KthLargestInStream",
   srcs = ["KthLargestInStream.java"]
 )
@@ -85,6 +100,11 @@ java_binary(
 java_binary(
   name = "KClosestToOrigin",
   srcs = ["KClosestToOrigin.java"]
+)
+
+java_binary(
+  name = "LastStoneWeight",
+  srcs = ["LastStoneWeight.java"],
 )
 
 java_binary(
@@ -144,6 +164,11 @@ java_binary(
   name = "MergeTwoSortedLists",
   srcs = ["MergeTwoSortedLists.java"],
   deps = [":ListNode"]
+)
+
+java_binary(
+  name = "MinCostClimbingStairs",
+  srcs = ["MinCostClimbingStairs.java"]
 )
 
 java_binary(
@@ -314,6 +339,11 @@ java_library(
 java_library(
   name = "Pair",
   srcs = ["Pair.java"]
+)
+
+java_library(
+  name = "TaskScheduler",
+  srcs = ["TaskScheduler.java"]
 )
 
 java_library(
