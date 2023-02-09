@@ -43,6 +43,11 @@ java_binary(
 )
 
 java_binary(
+  name = "CourseSchedule",
+  srcs = ["CourseSchedule.java"]
+)
+
+java_binary(
   name = "DesignTwitter",
   srcs = ["DesignTwitter.java"]
 )
@@ -75,6 +80,16 @@ java_binary(
 java_binary(
   name = "FizzBuzzMultiThreaded",
   srcs = ["FizzBuzzMultiThreaded.java"]
+)
+
+java_binary(
+  name = "HouseRobber",
+  srcs = ["HouseRobber.java"]
+)
+
+java_binary(
+  name = "HouseRobberII",
+  srcs = ["HouseRobberII.java"]
 )
 
 java_binary(
@@ -198,6 +213,11 @@ java_binary(
 )
 
 java_binary(
+  name = "PalindromicSubstring",
+  srcs = ["PalindromicSubstring.java"],
+)
+
+java_binary(
   name = "Permutations",
   srcs = ["Permutations.java"],
 )
@@ -258,6 +278,11 @@ java_binary(
   name = "SerializeAndDeserializeBinaryTree",
   srcs = ["SerializeAndDeserializeBinaryTree.java"],
   deps = ["TreeNode"]
+)
+
+java_binary(
+  name = "SimplifyPath",
+  srcs = ["SimplifyPath.java"]
 )
 
 java_binary(
