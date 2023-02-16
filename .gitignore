@@ -1,3 +1,7 @@
 /bazel-*
 *.pyc
 *.swp
+
+.project
+.classpath
+.settings/

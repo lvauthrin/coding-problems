@@ -93,6 +93,11 @@ java_binary(
 )
 
 java_binary(
+  name = "ImplementQueueUsingStacks",
+  srcs = ["ImplementQueueUsingStacks.java"]
+)
+
+java_binary(
   name = "IsoMorphicStrings",
   srcs = ["IsoMorphicStrings.java"]
 )
@@ -129,8 +134,8 @@ java_binary(
 )
 
 java_binary(
-  name = "LongestSubstringWithoutRepeating",
-  srcs = ["LongestSubstringWithoutRepeating.java"]
+  name = "LongestIncreasingSubsequence",
+  srcs = ["LongestIncreasingSubsequence.java"]
 )
 
 java_binary(
@@ -141,6 +146,11 @@ java_binary(
 java_binary(
   name = "LongestPalindromicSubstring",
   srcs = ["LongestPalindromicSubstring.java"]
+)
+
+java_binary(
+  name = "LongestSubstringWithoutRepeating",
+  srcs = ["LongestSubstringWithoutRepeating.java"]
 )
 
 java_binary(
@@ -184,6 +194,11 @@ java_binary(
 java_binary(
   name = "MinCostClimbingStairs",
   srcs = ["MinCostClimbingStairs.java"]
+)
+
+java_binary(
+  name = "MinimumSizeSubarraySum",
+  srcs = ["MinimumSizeSubarraySum.java"]
 )
 
 java_binary(
