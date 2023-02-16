@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.Map;
-import java.util.HashMap;
 
 class CoinChange {
   public int coinChangeDP(int[] coins, int amount) {
