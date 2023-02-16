@@ -1,4 +1,10 @@
 java_binary(
+  name = "AddTwoNumbers",
+  srcs = ["AddTwoNumbers.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
   name = "BestTimeBuySellStock",
   srcs = ["BestTimeBuySellStock.java"],
   deps = [":TreeNode"]
