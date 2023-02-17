@@ -53,10 +53,10 @@ java_binary(
   srcs = ["CoinChange.java"]
 )
 
-java_binary(
-  name = "ConstructString",
-  srcs = ["ConstructString.java"]
-)
+#java_binary(
+#  name = "ConstructString",
+#  srcs = ["ConstructString.java"]
+#)
 
 java_binary(
   name = "ContainerWithMostWater",
@@ -451,5 +451,10 @@ java_library(
 java_library(
   name = "ValidParentheses",
   srcs = ["ValidParentheses.java"]
+)
+
+java_library(
+  name = "ValidSudoku",
+  srcs = ["ValidSudoku.java"]
 )
 
