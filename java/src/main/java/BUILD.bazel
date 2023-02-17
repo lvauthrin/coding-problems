@@ -64,13 +64,13 @@ java_binary(
 )
 
 java_binary(
-  name = "FindAllAnagramsInString",
-  srcs = ["FindAllAnagramsInString.java"]
+  name = "FindAllAnagramsInAString",
+  srcs = ["FindAllAnagramsInAString.java"]
 )
 
 java_binary(
-  name = "FindAllDisappearedNumbers",
-  srcs = ["FindAllDisappearedNumbers.java"]
+  name = "FindAllDisappearedInAnArray",
+  srcs = ["FindAllDisappearedInAnArray.java"]
 )
 
 java_binary(
@@ -173,6 +173,11 @@ java_binary(
 java_binary(
   name = "MaxConsecutiveOnes",
   srcs = ["MaxConsecutiveOnes.java"]
+)
+
+java_binary(
+  name = "MaximumProductSubarray",
+  srcs = ["MaximumProductSubarray.java"]
 )
 
 java_binary(
@@ -281,8 +286,14 @@ java_binary(
 )
 
 java_binary(
-  name = "RottenOranges",
-  srcs = ["RottenOranges.java"],
+  name = "RottingOranges",
+  srcs = ["RottingOranges.java"],
+)
+
+java_binary(
+  name = "SameTree",
+  srcs = ["SameTree.java"],
+  deps = [":TreeNode"],
 )
 
 java_binary(
@@ -291,8 +302,8 @@ java_binary(
 )
 
 java_binary(
-  name = "SearchRotatedSortedArray",
-  srcs = ["SearchRotatedSortedArray.java"]
+  name = "SearchInRotatedSortedArray",
+  srcs = ["SearchInRotatedSortedArray.java"]
 )
 
 java_binary(
@@ -327,8 +338,8 @@ java_binary(
 )
 
 java_binary(
-  name = "StringToInteger",
-  srcs = ["StringToInteger.java"]
+  name = "StringToIntegerAtoi",
+  srcs = ["StringToIntegerAtoi.java"]
 )
 
 java_binary(
