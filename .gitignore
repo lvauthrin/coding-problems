@@ -5,3 +5,6 @@
 .project
 .classpath
 .settings/
+
+.bsp/
+.scala-build/

@@ -23,6 +23,11 @@ java_binary(
 )
 
 java_binary(
+  name = "BuildingsWithOceanView",
+  srcs = ["BuildingsWithOceanView.java"],
+)
+
+java_binary(
   name = "ClimbingStairs",
   srcs = ["ClimbingStairs.java"],
 )
@@ -46,6 +51,16 @@ java_binary(
 java_binary(
   name = "CoinChange",
   srcs = ["CoinChange.java"]
+)
+
+java_binary(
+  name = "ConstructString",
+  srcs = ["ConstructString.java"]
+)
+
+java_binary(
+  name = "ContainerWithMostWater",
+  srcs = ["ContainerWithMostWater.java"]
 )
 
 java_binary(
@@ -183,6 +198,11 @@ java_binary(
 java_binary(
   name = "MaximumProfitJobScheduling",
   srcs = ["MaximumProfitJobScheduling.java"]
+)
+
+java_binary(
+  name = "MaximumSubarray",
+  srcs = ["MaximumSubarray.java"]
 )
 
 java_binary(
@@ -399,6 +419,11 @@ java_library(
 )
 
 java_library(
+  name = "ProductOfArrayExceptSelf",
+  srcs = ["ProductOfArrayExceptSelf.java"]
+)
+
+java_library(
   name = "TaskScheduler",
   srcs = ["TaskScheduler.java"]
 )
@@ -416,5 +441,15 @@ java_library(
 java_library(
   name = "Trie",
   srcs = ["Trie.java"]
+)
+
+java_library(
+  name = "TwoSum",
+  srcs = ["TwoSum.java"]
+)
+
+java_library(
+  name = "ValidParentheses",
+  srcs = ["ValidParentheses.java"]
 )
 
