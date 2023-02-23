@@ -23,6 +23,12 @@ java_binary(
 )
 
 java_binary(
+  name = "DesignBoundedBlockingQueue",
+  srcs = ["DesignBoundedBlockingQueue.java"],
+  deps = [":TreeNode"]
+)
+
+java_binary(
   name = "BuildingsWithOceanView",
   srcs = ["BuildingsWithOceanView.java"],
 )
@@ -53,6 +59,11 @@ java_binary(
   srcs = ["CoinChange.java"]
 )
 
+java_binary(
+  name = "ConstructQuadTree",
+  srcs = ["ConstructQuadTree.java"]
+)
+
 #java_binary(
 #  name = "ConstructString",
 #  srcs = ["ConstructString.java"]
@@ -66,6 +77,11 @@ java_binary(
 java_binary(
   name = "CourseSchedule",
   srcs = ["CourseSchedule.java"]
+)
+
+java_binary(
+  name = "DecodeString",
+  srcs = ["DecodeString.java"]
 )
 
 java_binary(
@@ -104,6 +120,11 @@ java_binary(
 )
 
 java_binary(
+  name = "Futures",
+  srcs = ["Futures.java"]
+)
+
+java_binary(
   name = "HouseRobber",
   srcs = ["HouseRobber.java"]
 )
@@ -116,6 +137,17 @@ java_binary(
 java_binary(
   name = "ImplementQueueUsingStacks",
   srcs = ["ImplementQueueUsingStacks.java"]
+)
+
+java_binary(
+  name = "InsertInterval",
+  srcs = ["InsertInterval.java"],
+)
+
+java_binary(
+  name = "InvertBinaryTree",
+  srcs = ["InvertBinaryTree.java"],
+  deps = [":TreeNode"],
 )
 
 java_binary(
@@ -206,6 +238,16 @@ java_binary(
 )
 
 java_binary(
+  name = "MeetingRooms",
+  srcs = ["MeetingRooms.java"]
+)
+
+java_binary(
+  name = "MeetingRoomsII",
+  srcs = ["MeetingRoomsII.java"]
+)
+
+java_binary(
   name = "MergeIntervals",
   srcs = ["MergeIntervals.java"],
 )
@@ -223,8 +265,19 @@ java_binary(
 )
 
 java_binary(
+  name = "MiddleOfLinkedList",
+  srcs = ["MiddleOfLinkedList.java"],
+  deps = [":ListNode"]
+)
+
+java_binary(
   name = "MinCostClimbingStairs",
   srcs = ["MinCostClimbingStairs.java"]
+)
+
+java_binary(
+  name = "MinimumIntervalToIncludeEachQuery",
+  srcs = ["MinimumIntervalToIncludeEachQuery.java"]
 )
 
 java_binary(
@@ -238,14 +291,13 @@ java_binary(
 )
 
 java_binary(
-  name = "MiddleOfLinkedList",
-  srcs = ["MiddleOfLinkedList.java"],
-  deps = [":ListNode"]
+  name = "NaryTreePreorderTraversal",
+  srcs = ["NaryTreePreorderTraversal.java"],
 )
 
 java_binary(
-  name = "NaryTreePreorderTraversal",
-  srcs = ["NaryTreePreorderTraversal.java"],
+  name = "NonOverlappingIntervals",
+  srcs = ["NonOverlappingIntervals.java"],
 )
 
 java_binary(
@@ -281,6 +333,11 @@ java_binary(
 java_binary(
   name = "RandomPickWithWeight",
   srcs = ["RandomPickWithWeight.java"],
+)
+
+java_binary(
+  name = "RemoveCoveredIntervals",
+  srcs = ["RemoveCoveredIntervals.java"],
 )
 
 java_binary(
