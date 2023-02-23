@@ -100,8 +100,8 @@ java_binary(
 )
 
 java_binary(
-  name = "FindAllDisappearedInAnArray",
-  srcs = ["FindAllDisappearedInAnArray.java"]
+  name = "FindAllNumbersDisappearedInAnArray",
+  srcs = ["FindAllNumbersDisappearedInAnArray.java"]
 )
 
 java_binary(

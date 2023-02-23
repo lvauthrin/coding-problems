@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class FindAllDisappearedNumbers {
+class FindAllNumbersDisappearedInAnArray {
   public void swaps(int[] nums, int curr) {
     while (curr != nums[curr - 1]) {
       var tmp = nums[curr - 1];
