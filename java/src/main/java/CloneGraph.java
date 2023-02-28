@@ -19,16 +19,17 @@ class Solution {
       var curr = queue.poll();
 
       for (var child : curr.neighbors) {
-        var newChild = seen.containsKey(child.val) ? seen.get(child.val) : new Node(child.val, new ArrayList<>());
-
-        var ns = new Node[] { child, newChild };
+        final Node newChild;
 
         if (!seen.containsKey(child.val)) {
+          newChild = new Node(child.val, new ArrayList<>());
+          seen.put(child.val, newChild);
           queue.offer(child);
-          seen.put(ns[0].val, newChild);
+        } else {
+          newChild = seen.get(child.val);
         }
 
-        seen.get(curr.val).neighbors.add(ns[1]);
+        seen.get(curr.val).neighbors.add(newChild);
       }
 
     }

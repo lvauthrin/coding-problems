@@ -5,6 +5,11 @@ java_binary(
 )
 
 java_binary(
+  name = "AsteroidCollision",
+  srcs = ["AsteroidCollision.java"],
+)
+
+java_binary(
   name = "BestTimeBuySellStock",
   srcs = ["BestTimeBuySellStock.java"],
   deps = [":TreeNode"]
@@ -23,9 +28,18 @@ java_binary(
 )
 
 java_binary(
+  name = "CarFleet",
+  srcs = ["CarFleet.java"],
+)
+
+java_binary(
   name = "DesignBoundedBlockingQueue",
   srcs = ["DesignBoundedBlockingQueue.java"],
-  deps = [":TreeNode"]
+)
+
+java_binary(
+  name = "DesignBoundedBlockingQueueWithLocks",
+  srcs = ["DesignBoundedBlockingQueueWithLocks.java"],
 )
 
 java_binary(
@@ -135,6 +149,11 @@ java_binary(
 )
 
 java_binary(
+  name = "ImplementStackUsingQueue",
+  srcs = ["ImplementStackUsingQueue.java"]
+)
+
+java_binary(
   name = "ImplementQueueUsingStacks",
   srcs = ["ImplementQueueUsingStacks.java"]
 )
@@ -148,6 +167,11 @@ java_binary(
   name = "InvertBinaryTree",
   srcs = ["InvertBinaryTree.java"],
   deps = [":TreeNode"],
+)
+
+java_binary(
+  name = "IslandPerimeter",
+  srcs = ["IslandPerimeter.java"]
 )
 
 java_binary(
@@ -215,6 +239,11 @@ java_binary(
 java_binary(
   name = "MatrixDistanceToClosestZero",
   srcs = ["MatrixDistanceToClosestZero.java"]
+)
+
+java_binary(
+  name = "MaxAreaOfIsland",
+  srcs = ["MaxAreaOfIsland.java"]
 )
 
 java_binary(
@@ -308,6 +337,11 @@ java_binary(
 java_binary(
   name = "NumberOfOneBits",
   srcs = ["NumberOfOneBits.java"],
+)
+
+java_binary(
+  name = "OneThreeTwoPattern",
+  srcs = ["OneThreeTwoPattern.java"],
 )
 
 java_binary(
@@ -513,5 +547,10 @@ java_library(
 java_library(
   name = "ValidSudoku",
   srcs = ["ValidSudoku.java"]
+)
+
+java_library(
+  name = "VerifyingAnAlienDictionary",
+  srcs = ["VerifyingAnAlienDictionary.java"]
 )
 
