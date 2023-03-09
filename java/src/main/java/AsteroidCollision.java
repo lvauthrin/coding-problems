@@ -28,7 +28,7 @@ class AsteroidCollision {
     var i = stack.size() - 1;
     var ans = new int[stack.size()];
 
-    for (var n : stack.toArray())
+    while (!stack.isEmpty())
       ans[i--] = stack.pop();
     return ans;
   }

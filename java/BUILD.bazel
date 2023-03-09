@@ -1,0 +1,18 @@
+load("@bazel_common//tools/maven:pom_file.bzl", "pom_file")
+
+# NOTE: Example of generating a pom file
+#java_binary(
+#  name = "chatgpt",
+#  srcs = ["//java/src/main/java:AssistantToChatGPT.java"],
+#  deps = [
+#    "@maven//:com_google_cloud_functions_functions_framework_api"
+#  ],
+#)
+#
+#pom_file(
+#    name = "chatgpt-pom",
+#    targets = [
+#        ":chatgpt",
+#    ],
+#    template_file = "pom_template.xml",
+#)

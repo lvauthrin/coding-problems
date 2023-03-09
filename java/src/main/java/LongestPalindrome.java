@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-class longestPalindrome {
+class LongestPalindrome {
   public int longestPalindrome(String s) {
     var charCounts = new HashMap<Character, Integer>();
 

@@ -1,4 +1,9 @@
-class generateParenthesis {
+import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class GenerateParentheses {
   public static class Triple {
     public int f;
     public int s;

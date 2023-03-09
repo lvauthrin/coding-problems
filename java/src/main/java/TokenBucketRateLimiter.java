@@ -1,5 +1,5 @@
+import java.util.Arrays;
 import java.util.Map;
-import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
@@ -35,9 +35,7 @@ public class TokenBucketRateLimiter {
   public static void main(String[] args) throws InterruptedException {
     var rlm = new TokenBucketRateLimiter(5);
 
-    var allowed = true;
-
-    for (Map.Entry<Long, Boolean> req : new Map.Entry[] {
+    for (Map.Entry<Long, Boolean> req : Arrays.asList(
         Map.entry(0l, true),
         Map.entry(5l, true),
         Map.entry(10l, true),
@@ -49,8 +47,8 @@ public class TokenBucketRateLimiter {
         Map.entry(40l, false),
         Map.entry(45l, false),
         Map.entry(50l, true),
-        Map.entry(55l, false),
-    }) {
+        Map.entry(55l, false)
+    )) {
       if (rlm.allowRequest(req.getKey()) != req.getValue())
         System.out.println(String.format("Failure: %s was %s", req.getKey(), req.getValue()));
       Thread.sleep(5l);

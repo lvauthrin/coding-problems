@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
-import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 class DesignBoundedBlockingQueueWithLocks {
@@ -96,7 +94,7 @@ class DesignBoundedBlockingQueueWithLocks {
         while (count < 50) {
           try {
             Thread.sleep(10);
-            int num = boundedBlockingQueue.dequeue();
+            boundedBlockingQueue.dequeue();
             // System.out.println("Polled: " + num);
             count++;
           } catch (InterruptedException e) {

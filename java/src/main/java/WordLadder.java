@@ -41,9 +41,8 @@ class WordLadder {
     var queue = new LinkedList<Pair<String, Integer>>();
     var seen = new HashSet<String>();
 
-    queue.offer(new Pair(beginWord, 1));
+    queue.offer(new Pair<String, Integer>(beginWord, 1));
 
-    var found = false;
     /*
      * hit -> cog | [hot dot dog lot log cog]
      * [
@@ -76,7 +75,7 @@ class WordLadder {
 
         if (!seen.contains(neighbor)) {
           seen.add(neighbor);
-          queue.offer(new Pair(neighbor, level + 1));
+          queue.offer(new Pair<String, Integer>(neighbor, level + 1));
         }
       }
     }

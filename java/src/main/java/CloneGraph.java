@@ -1,8 +1,26 @@
+import java.util.List;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
 class Solution {
+  public static class Node {
+    public int val;
+    public List<Node> neighbors;
+
+    public Node() {
+    }
+
+    public Node(int _val) {
+      val = _val;
+    }
+
+    public Node(int _val, List<Node> _children) {
+      val = _val;
+      neighbors = _children;
+    }
+  };
+
   public Node cloneGraph(Node node) {
     // Store all "seen" nodes. Do a BFS on the neighbors and copy them in the graph.
     if (node == null)

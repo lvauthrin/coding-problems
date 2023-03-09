@@ -46,7 +46,7 @@ class PrintInOrder {
   }
 
   public static void main(final String[] args) throws InterruptedException {
-    final var foo = new PrintInOrder();
+    new PrintInOrder();
     // TODO: FIgure out how to run this with threads
   }
 }

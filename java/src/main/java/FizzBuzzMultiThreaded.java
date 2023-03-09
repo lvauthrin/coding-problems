@@ -4,7 +4,6 @@ import java.util.function.IntConsumer;
 
 class FizzBuzzMultiThreaded {
   private volatile boolean debug = false;
-  private int n;
   private AtomicInteger a = new AtomicInteger(1);
   private Semaphore fizz = new Semaphore(0);
   private Semaphore buzz = new Semaphore(0);
@@ -13,7 +12,6 @@ class FizzBuzzMultiThreaded {
   private int fizzx, buzzx, fizzbuzzx, numx = 0;
 
   public FizzBuzzMultiThreaded(int n) {
-    this.n = n;
     this.fizzbuzzx = n / 15;
     this.fizzx = n / 3 - fizzbuzzx;
     this.buzzx = n / 5 - fizzbuzzx;
